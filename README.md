@@ -12,6 +12,7 @@ A saída é formatada no terminal com [Rich](https://github.com/Textualize/rich)
 - Saída colorida e amigável no terminal.
 - **Idioma PT-BR** e **unidades métricas** já configurados.
 - Tratamento básico de erros (cidade inexistente, chave inválida, limite da API).
+- Uso de **variáveis de ambiente** via `.env` para proteger a chave da API.
 
 ---
 
@@ -24,12 +25,16 @@ Dependências Python:
 - `requests`
 - `python-dotenv`
 - `rich`
+- `pytest` e `pytest-cov` (para testes)
 
-Instalação:
+---
+
+## ⚙️ Instalação
 
 ```bash
 # criar ambiente virtual (opcional)
 python -m venv .venv
+
 # ativar ambiente
 # Windows
 .venv\Scripts\activate
@@ -38,11 +43,3 @@ source .venv/bin/activate
 
 # instalar dependências
 pip install -r requirements.txt
-
-## Atualizações Gabriel: ##
-
--Foi incluído um arquivo .env que contém a chave da API. Dessa forma, o código fica dinâmico utilizando uma chave ativa. Caso haja necessidade, é só alterar o arquivo;
--Sugestão: Validar o git.ignore, pois o mesmo pode estar ignorando o .env;
--Comentei o print que mostrava a chave da API, visando deixar a saída mais fluída e limpa;
-
-
